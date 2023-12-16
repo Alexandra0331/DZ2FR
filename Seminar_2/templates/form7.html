@@ -1,0 +1,20 @@
+{% extends "layoyt2.html" %}
+
+{% block content %}
+<div class="container m-3">
+
+    {% if data %}
+    <div class="container mb-3">
+        <p> Число {{ number }}</p>
+        <p> Квадрат числа {{ data }}<p/>
+    </div>
+    {% endif %}
+
+      <form action="{{ url_for('index_post') }}" method=post enctype="multipart/form-data">
+          <input type="number"  name="number">
+          <input type="submit" value="Отправить">
+       </form>
+</div>
+{% endblock content %}
+
+
